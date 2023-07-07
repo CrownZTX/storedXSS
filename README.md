@@ -6,24 +6,18 @@ Vendor:https://github.com/Geeklog-Core/geeklog
 ## PoC
 1. Log in to the Geeklog's admin account and Navigate to URL Routing and click an Edit button.
 
-![Config_mail](https://github.com/CrownZTX/reflectedxss1/blob/main/images/geeklog_config_mail.png)
+![Geeklog_route](https://github.com/CrownZTX/storedXSS/blob/main/images/geeklog_route.png)
 
-3. Enter the payload to the input area of Mail Settings[backend] and click on SAVE CHANGES. The payload is
+2. Enter the payloads to the input areas of Rule and Route. Then click on SAVE. The payloads are
 ~~~
-"><script>alert('xss');</script>
+<script>alert('xss_rule');</script>
+<script>alert('xss_route');</script>
 ~~~
 
-![bankend_inject](https://github.com/CrownZTX/reflectedxss1/blob/main/images/geeklog_bankend_inject.png)
-3. We can observe the payload getting triggered.
+![edit_routing](https://github.com/CrownZTX/storedXSS/blob/main/images/edit_routing.png)
+3. We can observe the payloads getting triggered. Multiple visits to the routing manager page will still trigger payloads.
 
-![bankend_reflect](https://github.com/CrownZTX/reflectedxss1/blob/main/images/geeklog_bankend_reflect.png)
+![xss_rule](https://github.com/CrownZTX/storedXSS/blob/main/images/xss_rule.png)
 
-4.Similarly, we can enter the payload to the input area of Mail Settings[host], Mail Settings[port] and Mail Settings[auth].
+![xss_route](https://github.com/CrownZTX/storedXSS/blob/main/images/xss_route.png)
 
-![hpa_inject](https://github.com/CrownZTX/reflectedxss1/blob/main/images/host_port_auth_inject.png)
-
-5. We can observe all payloads getting triggered.
-
-![host_reflect](https://github.com/CrownZTX/reflectedxss1/blob/main/images/host_reflect.png)
-![port_reflect](https://github.com/CrownZTX/reflectedxss1/blob/main/images/port_reflect.png)
-![anth_reflect](https://github.com/CrownZTX/reflectedxss1/blob/main/images/anth_reflect.png)
