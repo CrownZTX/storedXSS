@@ -1,5 +1,5 @@
 # Stored XSS in Geeklog v2.2.2
-Geeklog v2.2.2 is vulnerable to Stored Cross-Site Scripting (XSS) in public_html/admin//router.php
+Geeklog v2.2.2 is vulnerable to Stored Cross-Site Scripting (XSS) in public_html/admin/router.php
 
 Vendor:https://github.com/Geeklog-Core/geeklog
 
